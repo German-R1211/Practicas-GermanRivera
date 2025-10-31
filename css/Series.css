@@ -1,0 +1,101 @@
+/*documento css*/
+
+body {
+    /* Fondo temático: degradado que combina colores de las 3 series */
+    background: linear-gradient(135deg, 
+        #8b0000 0%,  /* Rojo oscuro - TWD */
+        #363636 25%, /* Gris oscuro/Negro - TWD/General */
+        #00aaff 50%, /* Azul brillante - Bleach */
+        #000080 75%, /* Azul marino - Bleach */
+        #4b0082 100% /* Índigo/Morado - Demon Lord */
+    );
+    font-family: 'Arial', sans-serif;
+    color: #f5f5f5; /* Color de texto claro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la vista */
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px #000;
+}
+
+/* Contenedor principal para las series (Alineación horizontal y centrado) */
+.series-container {
+    display: flex;
+    flex-direction: row; /* Coloca los elementos en una fila */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    flex-wrap: wrap; /* Permite que las tarjetas salten de línea en pantallas pequeñas */
+    gap: 30px; /* Espacio entre las tarjetas */
+    padding: 40px 20px;
+    flex-grow: 1; /* Permite que este contenedor use el espacio restante */
+}
+
+/* Estilo para cada tarjeta de serie */
+.serie-card {
+    background-color: rgba(10, 10, 10, 0.85); /* Fondo muy oscuro, casi opaco */
+    border: 1px solid #444;
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px; /* Ancho fijo para cada tarjeta */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.serie-card:hover {
+    transform: translateY(-5px); /* Pequeño efecto al pasar el mouse */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.7);
+}
+
+.serie-card h2 {
+    color: #ffcc00; /* Color de título llamativo */
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+.serie-image {
+    width: 100%;
+    height: 350px; /* Altura fija para el contenedor de la imagen */
+    margin-bottom: 15px;
+    overflow: hidden; /* Oculta partes de la imagen si no cabe */
+    border-radius: 8px;
+    border: 2px solid #ffcc00;
+}
+
+.serie-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para que cubra todo el espacio sin distorsionarse */
+    display: block;
+}
+
+.sinopsis {
+    text-align: left;
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #aaa;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+    border-top: 1px solid #333;
+}

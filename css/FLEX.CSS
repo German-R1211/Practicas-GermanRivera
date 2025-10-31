@@ -1,0 +1,40 @@
+/*documento css*/
+
+*{ margin: 0px;
+    padding: 0px; }
+
+.card { background-color: rgb(0, 255, 30);
+padding: 80px 0%;
+
+} 
+
+.container {background-color: aqua;
+padding: 16px;
+width: 100%;
+margin: auto;
+display: flex;
+flex-flow: row wrap;
+min-height: 1px;
+
+} 
+
+.items { background-color: orange;
+        width: 33.33%;
+        text-align: center;
+        min-height: 100px;
+        
+
+}
+
+.items img{
+
+width: 100%;
+height: auto;
+
+}
+
+
+.dos {align-self: flex-start;
+
+}
+
